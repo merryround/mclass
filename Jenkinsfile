@@ -53,9 +53,9 @@ pipeline {
             }
         }
 
-
         stage('Remote Docker Build & Deploy') {
             steps {
+                // ENDSSH 뒤에 공백이 없도록 주위
                 sshagent(credentials: [env.SSH_CREDENTIALS_ID]) {
                     sh """
 ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${REMOTE_USER}@${REMOTE_HOST} << ENDSSH
