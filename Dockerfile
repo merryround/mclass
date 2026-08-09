@@ -11,3 +11,5 @@ EXPOSE 8081
 
 # 컨테이너 실행 시 JAR 실행
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
+#테스트
